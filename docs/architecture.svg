@@ -1,0 +1,150 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c0c1a"/>
+      <stop offset="100%" style="stop-color:#070711"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+  <rect width="900" height="620" fill="none" stroke="#26264a" stroke-width="1.5" rx="16"/>
+
+  <!-- Title -->
+  <rect x="300" y="18" width="300" height="36" rx="10" fill="url(#hdr)" opacity="0.15"/>
+  <rect x="300" y="18" width="300" height="36" rx="10" fill="none" stroke="url(#hdr)" stroke-width="1"/>
+  <text x="450" y="41" text-anchor="middle" fill="url(#hdr)" font-size="14" font-weight="bold" letter-spacing="2">⌘ DEVOS ARCHITECTURE</text>
+
+  <!-- ── USER BROWSER ── -->
+  <rect x="30" y="80" width="840" height="80" rx="10" fill="#0f0f22" stroke="#1e1e3a" stroke-width="1"/>
+  <text x="450" y="100" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">USER BROWSER</text>
+  <rect x="120" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#00d4ff33" stroke-width="1"/>
+  <text x="175" y="128" text-anchor="middle" fill="#00d4ff" font-size="10" font-weight="bold">React 18</text>
+  <rect x="250" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#7c3aed33" stroke-width="1"/>
+  <text x="305" y="128" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold">Vite 5 (HMR)</text>
+  <rect x="380" y="108" width="130" height="32" rx="7" fill="#13132a" stroke="#10b98133" stroke-width="1"/>
+  <text x="445" y="128" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">CSS Variables</text>
+  <rect x="530" y="108" width="130" height="32" rx="7" fill="#13132a" stroke="#f59e0b33" stroke-width="1"/>
+  <text x="595" y="128" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="bold">Space Mono + Syne</text>
+  <rect x="680" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#3b82f633" stroke-width="1"/>
+  <text x="735" y="128" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="bold">In-Memory State</text>
+
+  <!-- ── APP SHELL ── -->
+  <rect x="30" y="178" width="840" height="70" rx="10" fill="#0c0c1a" stroke="#191932" stroke-width="1"/>
+  <text x="450" y="196" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">APP SHELL  —  src/App.jsx</text>
+  <rect x="80" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="130" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">AuthScreen</text>
+  <rect x="195" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="245" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">useState (19x)</text>
+  <rect x="310" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="360" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">useAlerts Hook</text>
+  <rect x="425" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="475" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Theme Toggle</text>
+  <rect x="540" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="590" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Tab Router</text>
+  <rect x="655" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
+  <text x="705" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Data Prop Drill</text>
+
+  <!-- ── LAYOUT ── -->
+  <rect x="30" y="265" width="250" height="100" rx="10" fill="#0c0c1a" stroke="#191932" stroke-width="1"/>
+  <text x="155" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">LAYOUT  —  src/layout/</text>
+  <rect x="48" y="291" width="200" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
+  <text x="148" y="307" text-anchor="middle" fill="#7c3aed" font-size="10">Sidebar.jsx  (NAV groups)</text>
+  <rect x="48" y="320" width="95" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
+  <text x="96" y="336" text-anchor="middle" fill="#7c3aed" font-size="10">TopBar.jsx</text>
+  <rect x="153" y="320" width="95" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
+  <text x="200" y="336" text-anchor="middle" fill="#7c3aed" font-size="10">AlertsStrip.jsx</text>
+
+  <!-- ── COMPONENTS ── -->
+  <rect x="295" y="265" width="200" height="100" rx="10" fill="#0c0c1a" stroke="#191932" stroke-width="1"/>
+  <text x="395" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">COMPONENTS</text>
+  <rect x="313" y="291" width="160" height="24" rx="6" fill="#0f0f22" stroke="#10b98122"/>
+  <text x="393" y="307" text-anchor="middle" fill="#10b981" font-size="10">Modal · Field · Empty</text>
+  <rect x="313" y="320" width="160" height="24" rx="6" fill="#0f0f22" stroke="#10b98122"/>
+  <text x="393" y="336" text-anchor="middle" fill="#10b981" font-size="10">ThemeToggle + index.js</text>
+
+  <!-- ── UTILS / HOOKS ── -->
+  <rect x="510" y="265" width="360" height="100" rx="10" fill="#0c0c1a" stroke="#191932" stroke-width="1"/>
+  <text x="690" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">UTILS + HOOKS + CONSTANTS</text>
+  <rect x="528" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="566" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">dates.js</text>
+  <rect x="614" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="652" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">colors.js</text>
+  <rect x="700" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="738" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">id.js</text>
+  <rect x="528" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="566" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">nav.js</text>
+  <rect x="614" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="652" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">statuses.js</text>
+  <rect x="700" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
+  <text x="738" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">useAlerts.js</text>
+
+  <!-- ── 19 PAGES ── -->
+  <rect x="30" y="382" width="840" height="150" rx="10" fill="#0c0c1a" stroke="#191932" stroke-width="1"/>
+  <text x="450" y="400" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">19 PAGES  —  src/pages/</text>
+
+  <!-- Row 1 -->
+  <rect x="48"  y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="92"  y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Dashboard</text>
+  <rect x="146" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="190" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Hackathons</text>
+  <rect x="244" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="288" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Projects</text>
+  <rect x="342" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="386" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Jobs</text>
+  <rect x="440" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="484" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Learning</text>
+  <rect x="538" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="582" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Skills</text>
+  <rect x="636" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="680" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Bookmarks</text>
+  <rect x="734" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
+  <text x="778" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Journal</text>
+
+  <!-- Row 2 -->
+  <rect x="48"  y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="92"  y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Goals</text>
+  <rect x="146" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="190" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Notes</text>
+  <rect x="244" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="288" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Pomodoro</text>
+  <rect x="342" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="386" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Socials</text>
+  <rect x="440" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="484" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">People</text>
+  <rect x="538" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="582" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Content Cal</text>
+  <rect x="636" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
+  <text x="680" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Events</text>
+
+  <!-- Row 3 — special pages -->
+  <rect x="48"  y="476" width="135" height="26" rx="6" fill="#0d0d1a" stroke="#ef444433"/>
+  <text x="115" y="493" text-anchor="middle" fill="#ef4444" font-size="9">AuthScreen  🔐</text>
+  <rect x="195" y="476" width="135" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
+  <text x="262" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">WeeklyStats  📊</text>
+  <rect x="342" y="476" width="135" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
+  <text x="409" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">Achievements  🏅</text>
+  <rect x="489" y="476" width="135" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
+  <text x="556" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">Profile  👤</text>
+  <rect x="636" y="476" width="186" height="26" rx="6" fill="url(#hdr)" opacity="0.9"/>
+  <text x="729" y="493" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">✦ AIInsights  (Claude API)</text>
+
+  <!-- ── EXTERNAL API ── -->
+  <rect x="30" y="550" width="840" height="52" rx="10" fill="#0c0c1a" stroke="#7c3aed44" stroke-width="1.5"/>
+  <text x="450" y="568" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">EXTERNAL  —  api.anthropic.com</text>
+  <rect x="200" y="574" width="500" height="20" rx="5" fill="url(#hdr)" opacity="0.12" stroke="url(#hdr)" stroke-width="0.5"/>
+  <text x="450" y="588" text-anchor="middle" fill="#a78bfa" font-size="10">POST /v1/messages  ·  model: claude-sonnet-4-20250514  ·  JSON response → AI Insights</text>
+
+  <!-- Connector lines -->
+  <line x1="450" y1="248" x2="450" y2="265" stroke="#26264a" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="450" y1="365" x2="450" y2="382" stroke="#26264a" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="450" y1="532" x2="450" y2="550" stroke="#7c3aed55" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
