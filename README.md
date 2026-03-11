@@ -10,7 +10,7 @@
 
 **The all-in-one OS for developers who want to ship more, miss less, and grow faster.**
 
-[🚀 Live Demo](#) · [📖 Architecture](#architecture) · [⚡ Quick Start](#quick-start)
+[🚀 Live Demo](https://codenimra.github.io/devos/) · [📖 Architecture](#architecture) · [⚡ Quick Start](#quick-start)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## 🧠 What is DevOS?
 
-DevOS is a personal developer dashboard that centralizes everything a developer needs to stay productive — hackathons, jobs, learning goals, projects, journal, notes, and more — all in one dark-themed command center with a built-in **AI Coach** powered by Claude.
+DevOS is a personal developer dashboard that centralizes everything a developer needs to stay productive hackathons, jobs, learning goals, projects, journal, notes, and more all in one dark-themed command center with a built-in **AI Coach** powered by Claude.
 
 Built for developers who:
 - Miss hackathon deadlines
@@ -33,7 +33,7 @@ Built for developers who:
 ### 🏆 Work Tracking
 | Feature | Description |
 |---|---|
-| **Hackathons** | Track deadlines with urgency colors — red if due today, amber if urgent |
+| **Hackathons** | Track deadlines with urgency colors red if due today, amber if urgent |
 | **Projects** | Link projects to hackathons, track build status and GitHub/demo links |
 | **Jobs** | Full job application pipeline from wishlist → offer with deadline alerts |
 
@@ -63,10 +63,10 @@ Built for developers who:
 ### ✦ AI Coach (Claude-Powered)
 The crown feature. Click **Generate AI Insights** and Claude reads your entire dev life journal entries, deadlines, goals, skill gaps and returns a **personalized action plan**:
 
-- **Headline**:  honest 1-line assessment of where you stand
+- **Headline**: honest 1-line assessment of where you stand
 - **Mood Pattern**: trend analysis from your journal
 - **Today's Plan**: specific tasks ranked by urgency
-- **Struggle Areas**:  skills/topics you seem to avoid
+- **Struggle Areas**: skills/topics you seem to avoid
 - **Hidden Insight**: non-obvious pattern Claude noticed
 - **This Week's Milestone**: the single most important thing to do
 
@@ -97,7 +97,7 @@ devos/
     ├── utils/
     │   ├── id.js                 # genId() unique ID generator
     │   ├── dates.js              # daysUntil, fmtDate, today, weekDay
-    │   └── colors.js             # urgColorHex, urgLabel — deadline urgency colors
+    │   └── colors.js             # urgColorHex, urgLabel deadline urgency colors
     ├── hooks/
     │   └── useAlerts.js          # Auto-generates alerts for urgent deadlines
     ├── components/
@@ -161,31 +161,25 @@ Email:    demo@dev.com
 Password: demo123
 ```
 
-### Build for Production
-
-```bash
-npm run build
-```
-
-The `dist/` folder is ready to deploy anywhere.
-
 ---
 
-## 🚀 Deploy to Netlify
+## 🚀 Deploy to GitHub Pages
 
-### Option 1: Drag & Drop (fastest)
-1. Run `npm run build`
-2. Go to [netlify.com](https://devos.netlify.com) → **Add new site**
-3. Drag the `dist/` folder into the deploy area
-4. Done live in 30 seconds ⚡
+This project is live at [codenimra.github.io/devos](https://codenimra.github.io/devos/).
 
-### Option 2 — Connect GitHub (recommended)
-1. Push this repo to GitHub
-2. Go to Netlify → **Add new site → Import from Git**
-3. Select your repo and set:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-4. Every push to `main` auto-deploys
+### Deploy your own fork
+
+```bash
+# Install gh-pages
+npm install gh-pages --save-dev
+
+# Build and deploy in one command
+npm run deploy
+```
+
+Your site goes live at `https://<codeNimra>.github.io/devos` in ~2 minutes.
+
+The `deploy` script builds the app and pushes `dist/` to the `gh-pages` branch automatically - GitHub Pages serves from there.
 
 ---
 
@@ -200,11 +194,11 @@ The `dist/` folder is ready to deploy anywhere.
 | Text Primary | `#e2e8f0` | `#0f172a` |
 | Font | Space Mono + Syne | Space Mono + Syne |
 
-Themes switch via `data-theme` attribute on `<html>` — no flash, instant.
+Themes switch via `data-theme` attribute on `<html>` no flash, instant.
 
 ---
 
-## 🤖 AI Coach - How It Works
+## 🤖 AI Coach — How It Works
 
 ```
 User clicks "Generate AI Insights"
@@ -238,10 +232,10 @@ UI renders personalized action plan
 | Build Tool | Vite 5 |
 | Styling | Pure CSS + CSS Variables (no Tailwind) |
 | AI | Anthropic Claude API (claude-sonnet-4-20250514) |
-| Fonts | Google Fonts + Space Mono + Syne |
+| Fonts | Google Fonts  Space Mono + Syne |
 | State | React useState (no Redux, no localStorage) |
 | Auth | Simulated local auth (demo mode) |
-| Deploy | Netlify |
+| Deploy | GitHub Pages |
 
 ---
 
@@ -254,7 +248,7 @@ dist/
 .env.local
 ```
 
-Everything else including `package-lock.json` — is committed intentionally.
+Everything else — including `package-lock.json` — is committed intentionally.
 
 ---
 
