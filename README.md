@@ -10,7 +10,7 @@
 
 **The all-in-one OS for developers who want to ship more, miss less, and grow faster.**
 
-[🚀 Live Demo](https://codenimra.github.io/devos/) · [📖 Architecture](#architecture) · [⚡ Quick Start](#quick-start)
+[🚀 Live Demo](https://codenimra.github.io/devos/)
 
 </div>
 
