@@ -1,4 +1,4 @@
-# ⌘ DevOS-Personal Developer Command Center
+# ⌘ DevOS — Personal Developer Command Center
 
 <div align="center">
 
@@ -18,13 +18,13 @@
 
 ## 🧠 What is DevOS?
 
-DevOS is a personal developer dashboard that centralizes everything a developer needs to stay productive hackathons, jobs, learning goals, projects, journal, notes, and more all in one dark-themed command center with a built-in **AI Coach** powered by Claude.
+DevOS is a personal developer dashboard that centralizes everything a developer needs to stay productive hackathons, jobs, learning goals, projects, journal, notes, and more all in one dark-themed command center with a built-in **AI Coach** that analyzes your data and tells you exactly what to focus on.
 
 Built for developers who:
 - Miss hackathon deadlines
 - Lose track of job applications
 - Forget what they planned to learn
-- Want an AI that actually knows their situation
+- Want smart insights without switching between 10 tools
 
 ---
 
@@ -33,7 +33,7 @@ Built for developers who:
 ### 🏆 Work Tracking
 | Feature | Description |
 |---|---|
-| **Hackathons** | Track deadlines with urgency colors red if due today, amber if urgent |
+| **Hackathons** | Track deadlines with urgency colors — red if due today, amber if urgent |
 | **Projects** | Link projects to hackathons, track build status and GitHub/demo links |
 | **Jobs** | Full job application pipeline from wishlist → offer with deadline alerts |
 
@@ -60,15 +60,18 @@ Built for developers who:
 | **Content Calendar** | Plan blog posts, tweets, videos with scheduled dates |
 | **Events** | Track conferences, meetups, hackathons with registration status |
 
-### ✦ AI Coach (Claude-Powered)
-The crown feature. Click **Generate AI Insights** and Claude reads your entire dev life journal entries, deadlines, goals, skill gaps and returns a **personalized action plan**:
+### ✦ AI Coach (Smart Analysis)
+The crown feature. The AI Coach analyzes your entire dev life — deadlines, goals, mood, skills, journal entries — and returns a personalized action plan instantly:
 
-- **Headline**: honest 1-line assessment of where you stand
-- **Mood Pattern**: trend analysis from your journal
-- **Today's Plan**: specific tasks ranked by urgency
-- **Struggle Areas**: skills/topics you seem to avoid
-- **Hidden Insight**: non-obvious pattern Claude noticed
-- **This Week's Milestone**: the single most important thing to do
+- **Productivity Score**: calculated from your real data
+- **Priority Queue**: color-coded urgent items (red = today, amber = urgent, purple = follow up)
+- **Smart Suggestions**: specific advice based on your actual hackathons, goals and mood
+- **Mood Trend**: visual chart from your journal entries
+- **Progress Breakdown**: learning, goals, and journal completion rates
+- **Skill Distribution**: breakdown of your skills by category
+
+### 💡 Daily Motivation
+Every time you open the Dashboard, a fresh developer quote greets you — rotates daily, always relevant.
 
 ---
 
@@ -112,7 +115,7 @@ devos/
     │   └── AlertsStrip.jsx       # Dismissible alert bar
     └── pages/                    # 19 page components
         ├── AuthScreen.jsx
-        ├── Dashboard.jsx
+        ├── Dashboard.jsx         # ✦ Daily motivational quote
         ├── Hackathons.jsx
         ├── Projects.jsx
         ├── Jobs.jsx
@@ -127,7 +130,7 @@ devos/
         ├── People.jsx
         ├── ContentCalendar.jsx
         ├── Events.jsx
-        ├── AIInsights.jsx        # ✦ Claude AI Coach
+        ├── AIInsights.jsx        # ✦ Smart AI Coach (no API needed)
         ├── WeeklyStats.jsx
         ├── Achievements.jsx
         └── Profile.jsx
@@ -161,6 +164,12 @@ Email:    demo@dev.com
 Password: demo123
 ```
 
+### Build for Production
+
+```bash
+npm run build
+```
+
 ---
 
 ## 🚀 Deploy to GitHub Pages
@@ -177,9 +186,9 @@ npm install gh-pages --save-dev
 npm run deploy
 ```
 
-Your site goes live at `https://<codeNimra>.github.io/devos` in ~2 minutes.
+Your site goes live at `https://<your-username>.github.io/devos` in ~2 minutes.
 
-The `deploy` script builds the app and pushes `dist/` to the `gh-pages` branch automatically - GitHub Pages serves from there.
+The `deploy` script builds the app and pushes `dist/` to the `gh-pages` branch automatically GitHub Pages serves from there.
 
 ---
 
@@ -194,33 +203,32 @@ The `deploy` script builds the app and pushes `dist/` to the `gh-pages` branch a
 | Text Primary | `#e2e8f0` | `#0f172a` |
 | Font | Space Mono + Syne | Space Mono + Syne |
 
-Themes switch via `data-theme` attribute on `<html>` no flash, instant.
+Themes switch via `data-theme` attribute on `<html>`  no flash, instant.
 
 ---
 
-## 🤖 AI Coach — How It Works
+## 🤖 AI Coach - How It Works
 
 ```
-User clicks "Generate AI Insights"
+User opens AI Coach page
          ↓
-App serializes: journal entries + hackathons + goals
-              + skills + notes + jobs + learnings
+App analyzes: hackathons + goals + learnings
+            + journal mood + skills + jobs
          ↓
-POST → api.anthropic.com/v1/messages
-       model: claude-sonnet-4-20250514
-       system: "You are a developer coach..."
-         ↓
-Claude returns structured JSON:
+Instant results no API call needed:
 {
-  headline, mood_pattern, struggle_areas,
-  coach_message, today_plan, hidden_insight,
-  next_milestone
+  productivity_score,
+  priority_queue,
+  smart_suggestions,
+  mood_trend,
+  progress_breakdown,
+  skill_distribution
 }
          ↓
 UI renders personalized action plan
 ```
 
-> **Note:** The API key is sent from the browser. Fine for personal use don't share your deployed URL publicly with your key in it.
+All analysis runs locally in the browser instant, private, no API key required.
 
 ---
 
@@ -231,8 +239,8 @@ UI renders personalized action plan
 | Frontend | React 18 |
 | Build Tool | Vite 5 |
 | Styling | Pure CSS + CSS Variables (no Tailwind) |
-| AI | Anthropic Claude API (claude-sonnet-4-20250514) |
-| Fonts | Google Fonts  Space Mono + Syne |
+| AI Analysis | Smart client-side logic + Anthropic Claude API ready |
+| Fonts | Google Fonts Space Mono + Syne |
 | State | React useState (no Redux, no localStorage) |
 | Auth | Simulated local auth (demo mode) |
 | Deploy | GitHub Pages |
@@ -248,13 +256,13 @@ dist/
 .env.local
 ```
 
-Everything else — including `package-lock.json` — is committed intentionally.
+Everything else including `package-lock.json` is committed intentionally.
 
 ---
 
 ## 🏁 Built For
 
-This project was built for the **Frostbyte Hackathon** (March 2025) under the theme: *Business & Management Tools + AI/ML*.
+This project was built for the **Frostbyte Hackathon 2026** under the theme: *Business & Management Tools + AI/ML*.
 
 ---
 
@@ -266,4 +274,6 @@ MIT free to use, fork, and build on.
 
 <div align="center">
   Made with 🤖 + ☕ by a developer who kept missing deadlines
+  <br/>
+  <sub>Built with React · Smart AI Analysis · Hosted on GitHub Pages</sub>
 </div>
