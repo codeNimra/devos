@@ -1,84 +1,220 @@
-import { useState } from 'react';
-import { genId }    from '../utils/id.js';
+import { useState, useEffect } from 'react';
+
+const SPLASH_QUOTES = [
+  "Your life, organized.",
+  "One OS for everything.",
+  "Built for humans, not just developers.",
+  "Work. Build. Connect. Grow.",
+];
 
 export default function AuthScreen({ onLogin }) {
-  const [mode,  setMode]  = useState('login');
-  const [f,     setF]     = useState({ name: '', email: '', password: '' });
-  const [users, setUsers] = useState([{ id: 'demo', name: 'Dev User', email: 'demo@dev.com', password: 'demo123' }]);
-  const [err,   setErr]   = useState('');
+  const [name,    setName]    = useState('');
+  const [field,   setField]   = useState('');
+  const [step,    setStep]    = useState('splash'); // splash → form → entering
+  const [quoteIdx, setQuoteIdx] = useState(0);
 
-  const go = () => {
-    setErr('');
-    if (!f.email || !f.password) return setErr('Email & password required');
-    if (mode === 'signup') {
-      if (!f.name) return setErr('Name required');
-      if (users.find((u) => u.email === f.email)) return setErr('Email already exists');
-      const u = { ...f, id: genId() };
-      setUsers((p) => [...p, u]);
-      onLogin(u);
-    } else {
-      const u = users.find((u) => u.email === f.email && u.password === f.password);
-      if (!u) return setErr('Invalid credentials · try demo@dev.com / demo123');
-      onLogin(u);
-    }
+  /* Auto-advance from splash to form after 2.2s */
+  useEffect(() => {
+    if (step !== 'splash') return;
+    const t = setTimeout(() => setStep('form'), 2200);
+    return () => clearTimeout(t);
+  }, [step]);
+
+  /* Cycle subtitle during splash */
+  useEffect(() => {
+    const t = setInterval(() => setQuoteIdx(i => (i + 1) % SPLASH_QUOTES.length), 1800);
+    return () => clearInterval(t);
+  }, []);
+
+  const handleEnter = () => {
+    const n = name.trim() || 'You';
+    const f = field.trim() || 'General';
+    onLogin({ name: n, field: f, joined: new Date().toISOString() });
   };
 
-  return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, background: 'var(--auth-bg)', position: 'relative', overflow: 'hidden' }}>
-      {/* Background glows */}
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% -10%,#00d4ff09,transparent)' }} />
-      <div style={{ position: 'absolute', top: '25%', right: '15%', width: 280, height: 280, background: '#7c3aed07', borderRadius: '50%', filter: 'blur(70px)' }} />
+  const handleKey = (e) => {
+    if (e.key === 'Enter' && name.trim()) handleEnter();
+  };
 
-      <div style={{ width: '100%', maxWidth: 380, zIndex: 1 }}>
-        {/* Logo */}
-        <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-            <div style={{ width: 38, height: 38, background: 'linear-gradient(135deg,#00d4ff,#7c3aed)', borderRadius: 11, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 19 }}>⌘</div>
-            <span style={{ fontFamily: 'Syne', fontSize: 28, fontWeight: 800, color: 'var(--txt)', letterSpacing: -1 }}>DevOS</span>
+  /* ── SPLASH PHASE ── */
+  if (step === 'splash') {
+    return (
+      <div className="splash-screen">
+        <div className="splash-grid" />
+
+        {/* Floating orbs */}
+        <div style={{
+          position: 'absolute', width: 400, height: 400,
+          borderRadius: '50%', top: '10%', left: '10%',
+          background: 'radial-gradient(circle, #00d4ff08, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+        <div style={{
+          position: 'absolute', width: 300, height: 300,
+          borderRadius: '50%', bottom: '15%', right: '15%',
+          background: 'radial-gradient(circle, #7c3aed08, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div style={{ position: 'relative', textAlign: 'center' }}>
+          {/* OS Logo */}
+          <div style={{
+            fontSize: 13, letterSpacing: 5, color: '#00d4ff44',
+            fontFamily: 'Syne, sans-serif', fontWeight: 700,
+            marginBottom: 16,
+            animation: 'fadeIn .6s ease both',
+          }}>
+            BOOTING SYSTEM
           </div>
-          <p style={{ fontSize: 11, letterSpacing: 2, color: 'var(--txt4)' }}>YOUR DEVELOPER COMMAND CENTER</p>
+
+          <div className="splash-logo">⌘ DevOS</div>
+
+          <div style={{
+            marginTop: 14,
+            fontSize: 12,
+            color: '#64748b',
+            letterSpacing: 3,
+            textTransform: 'uppercase',
+            fontFamily: 'Syne, sans-serif',
+            animation: 'fadeUp .6s .2s both',
+            minHeight: 20,
+            transition: 'opacity .4s',
+          }}>
+            {SPLASH_QUOTES[quoteIdx]}
+          </div>
+
+          {/* Loading bar */}
+          <div style={{
+            marginTop: 48,
+            width: 200,
+            height: 2,
+            background: '#1a1a35',
+            borderRadius: 2,
+            overflow: 'hidden',
+            animation: 'fadeIn .6s .3s both',
+          }}>
+            <div style={{
+              height: '100%',
+              borderRadius: 2,
+              background: 'linear-gradient(90deg, #00d4ff, #7c3aed)',
+              animation: 'loadBar 2s cubic-bezier(.4,0,.2,1) forwards',
+            }} />
+          </div>
         </div>
 
-        {/* Card */}
-        <div className="card" style={{ padding: 30 }}>
-          {/* Mode toggle */}
-          <div style={{ display: 'flex', gap: 6, marginBottom: 26, background: 'var(--input-bg)', borderRadius: 10, padding: 4 }}>
-            {['login', 'signup'].map((m) => (
-              <button
-                key={m}
-                onClick={() => { setMode(m); setErr(''); }}
-                style={{ flex: 1, padding: '8px 0', borderRadius: 8, background: mode === m ? '#00d4ff12' : 'transparent', color: mode === m ? '#00d4ff' : 'var(--txt4)', border: mode === m ? '1px solid #00d4ff28' : '1px solid transparent', fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', cursor: 'pointer', transition: 'all .2s' }}
-              >
-                {m}
-              </button>
-            ))}
-          </div>
+        <style>{`
+          @keyframes loadBar {
+            from { width: 0%; }
+            to   { width: 100%; }
+          }
+        `}</style>
+      </div>
+    );
+  }
 
-          {/* Fields */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
-            {mode === 'signup' && (
-              <div>
-                <label style={{ color: 'var(--txt4)', fontSize: 10, letterSpacing: 1, display: 'block', marginBottom: 5 }}>NAME</label>
-                <input className="inp" placeholder="Your name" value={f.name} onChange={(e) => setF((p) => ({ ...p, name: e.target.value }))} />
-              </div>
-            )}
-            <div>
-              <label style={{ color: 'var(--txt4)', fontSize: 10, letterSpacing: 1, display: 'block', marginBottom: 5 }}>EMAIL</label>
-              <input className="inp" type="email" placeholder="you@dev.com" value={f.email} onChange={(e) => setF((p) => ({ ...p, email: e.target.value }))} />
-            </div>
-            <div>
-              <label style={{ color: 'var(--txt4)', fontSize: 10, letterSpacing: 1, display: 'block', marginBottom: 5 }}>PASSWORD</label>
-              <input className="inp" type="password" placeholder="••••••••" value={f.password} onChange={(e) => setF((p) => ({ ...p, password: e.target.value }))} onKeyDown={(e) => e.key === 'Enter' && go()} />
-            </div>
-            {err && <p style={{ color: '#ef4444', fontSize: 11, padding: '8px 12px', background: '#ef444410', borderRadius: 8 }}>{err}</p>}
-            <button className="btn btn-primary" style={{ marginTop: 4, padding: '12px', fontSize: 12, borderRadius: 10 }} onClick={go}>
-              {mode === 'login' ? '▶ LAUNCH DEVOS' : '✦ CREATE ACCOUNT'}
-            </button>
-          </div>
+  /* ── FORM PHASE ── */
+  return (
+    <div className="splash-screen">
+      <div className="splash-grid" />
 
-          {mode === 'login' && (
-            <p style={{ color: 'var(--txt5)', fontSize: 10, textAlign: 'center', marginTop: 14 }}>Demo: demo@dev.com / demo123</p>
-          )}
+      <div style={{
+        position: 'absolute', width: 500, height: 500,
+        borderRadius: '50%', top: '5%', left: '5%',
+        background: 'radial-gradient(circle, #00d4ff06, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+      <div style={{
+        position: 'absolute', width: 400, height: 400,
+        borderRadius: '50%', bottom: '10%', right: '10%',
+        background: 'radial-gradient(circle, #7c3aed06, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{ position: 'relative', textAlign: 'center', width: '100%', maxWidth: 380, padding: '0 24px' }}>
+
+        {/* Logo small */}
+        <div style={{
+          fontFamily: 'Syne, sans-serif', fontWeight: 800,
+          fontSize: 22, marginBottom: 6,
+          background: 'linear-gradient(135deg, #00d4ff, #7c3aed)',
+          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          animation: 'fadeUp .5s both',
+        }}>
+          ⌘ DevOS
+        </div>
+
+        <div style={{
+          fontSize: 11, color: '#334155', letterSpacing: 2,
+          textTransform: 'uppercase', marginBottom: 40,
+          animation: 'fadeUp .5s .05s both',
+        }}>
+          Personal Operating System
+        </div>
+
+        {/* Welcome text */}
+        <div style={{
+          fontSize: 20, fontFamily: 'Syne, sans-serif', fontWeight: 700,
+          color: '#f1f5f9', marginBottom: 8, lineHeight: 1.3,
+          animation: 'fadeUp .5s .1s both',
+        }}>
+          What should we call you?
+        </div>
+        <div style={{
+          fontSize: 11, color: '#64748b', marginBottom: 28, lineHeight: 1.7,
+          animation: 'fadeUp .5s .15s both',
+        }}>
+          This is your personal space. No account, no password,<br />just you and your OS.
+        </div>
+
+        {/* Name input */}
+        <div style={{ animation: 'fadeUp .5s .2s both' }}>
+          <input
+            className="splash-input"
+            placeholder="Your name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            onKeyDown={handleKey}
+            autoFocus
+          />
+        </div>
+
+        {/* Field input */}
+        <div style={{ animation: 'fadeUp .5s .25s both', marginTop: 0 }}>
+          <select
+            className="splash-input"
+            value={field}
+            onChange={e => setField(e.target.value)}
+            style={{ textAlign: 'left', cursor: 'pointer', appearance: 'none' }}
+          >
+            <option value="">Select your field (optional)</option>
+            <option value="Software Engineering">💻 Software Engineering</option>
+            <option value="Computer Science">🎓 Computer Science</option>
+            <option value="Medicine & Healthcare">🏥 Medicine & Healthcare</option>
+            <option value="Design & Creative">🎨 Design & Creative</option>
+            <option value="Business & Finance">📊 Business & Finance</option>
+            <option value="Engineering">⚙️ Engineering</option>
+            <option value="Research & Academia">🔬 Research & Academia</option>
+            <option value="Freelance & Self-employed">💼 Freelance & Self-employed</option>
+            <option value="Home & Family">🏠 Home & Family</option>
+            <option value="Other">✨ Other</option>
+          </select>
+        </div>
+
+        {/* Enter button */}
+        <div style={{ animation: 'fadeUp .5s .3s both', marginTop: 6 }}>
+          <button
+            className="splash-btn"
+            onClick={handleEnter}
+            disabled={!name.trim()}
+            style={{ opacity: name.trim() ? 1 : 0.4 }}
+          >
+            Enter Your OS →
+          </button>
+        </div>
+
+        <div className="splash-hint">
+          Works for developers, students, doctors, designers, and everyone in between
         </div>
       </div>
     </div>

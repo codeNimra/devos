@@ -6,31 +6,34 @@ import TopBar      from './layout/TopBar.jsx';
 import AlertsStrip from './layout/AlertsStrip.jsx';
 
 // Pages
-import AuthScreen     from './pages/AuthScreen.jsx';
-import Dashboard      from './pages/Dashboard.jsx';
-import Hackathons     from './pages/Hackathons.jsx';
-import Projects       from './pages/Projects.jsx';
-import Jobs           from './pages/Jobs.jsx';
-import Learning       from './pages/Learning.jsx';
-import Skills         from './pages/Skills.jsx';
-import Bookmarks      from './pages/Bookmarks.jsx';
-import Journal        from './pages/Journal.jsx';
-import Goals          from './pages/Goals.jsx';
-import Notes          from './pages/Notes.jsx';
-import Pomodoro       from './pages/Pomodoro.jsx';
-import Socials        from './pages/Socials.jsx';
-import People         from './pages/People.jsx';
+import AuthScreen      from './pages/AuthScreen.jsx';
+import Dashboard       from './pages/Dashboard.jsx';
+import Hackathons      from './pages/Hackathons.jsx';
+import Projects        from './pages/Projects.jsx';
+import Jobs            from './pages/Jobs.jsx';
+import Learning        from './pages/Learning.jsx';
+import Skills          from './pages/Skills.jsx';
+import Bookmarks       from './pages/Bookmarks.jsx';
+import Journal         from './pages/Journal.jsx';
+import Goals           from './pages/Goals.jsx';
+import Habits          from './pages/Habits.jsx';
+import Hobbies         from './pages/Hobbies.jsx';
+import Notes           from './pages/Notes.jsx';
+import Pomodoro        from './pages/Pomodoro.jsx';
+import Socials         from './pages/Socials.jsx';
+import People          from './pages/People.jsx';
+import Calls           from './pages/Calls.jsx';
 import ContentCalendar from './pages/ContentCalendar.jsx';
-import Events         from './pages/Events.jsx';
-import AIInsights     from './pages/AIInsights.jsx';
-import WeeklyStats    from './pages/WeeklyStats.jsx';
-import Achievements   from './pages/Achievements.jsx';
-import Profile        from './pages/Profile.jsx';
+import Events          from './pages/Events.jsx';
+import AIInsights      from './pages/AIInsights.jsx';
+import WeeklyStats     from './pages/WeeklyStats.jsx';
+import Achievements    from './pages/Achievements.jsx';
+import Profile         from './pages/Profile.jsx';
 
 // Hooks & utils
-import { useAlerts }  from './hooks/useAlerts.js';
-import { today, weekDay } from './utils/dates.js';
-import { genId }      from './utils/id.js';
+import { useAlerts }         from './hooks/useAlerts.js';
+import { today, weekDay }    from './utils/dates.js';
+import { genId }             from './utils/id.js';
 
 export default function App() {
   const [user,        setUser]        = useState(null);
@@ -40,8 +43,8 @@ export default function App() {
 
   /* ── DATA STATE ── */
   const [hackathons, setHackathons] = useState([
-    { id: genId(), name: 'ETHGlobal Bangkok', platform: 'ETHGlobal', deadline: weekDay(2),  link: '', prize: '$50,000',    status: 'registered', notes: 'Build a DeFi project' },
-    { id: genId(), name: 'NASA Space Apps',   platform: 'NASA',      deadline: weekDay(10), link: '', prize: 'Recognition', status: 'interested', notes: '' },
+    { id: genId(), name: 'ETHGlobal Bangkok',    platform: 'ETHGlobal', deadline: weekDay(2),  link: '', prize: '$50,000',    status: 'registered', notes: 'Build a DeFi project' },
+    { id: genId(), name: 'NASA Space Apps 2026', platform: 'NASA',      deadline: weekDay(10), link: '', prize: 'Recognition', status: 'interested', notes: '' },
   ]);
 
   const [learnings, setLearnings] = useState([
@@ -70,53 +73,75 @@ export default function App() {
   ]);
 
   const [journal, setJournal] = useState([
-    { id: genId(), date: today(), mood: 4, title: 'Shipped the first hackathon project!', content: 'Finally got the MVP working. The AI integration took longer than expected but it\'s working. Need to polish the UI tomorrow before submission.', tags: 'hackathon,win' },
+    { id: genId(), date: today(), mood: 4, title: 'Productive day!', content: 'Got a lot done today. Feeling focused and motivated. Ready for the week ahead.', tags: 'work,focus' },
   ]);
 
   const [goals, setGoals] = useState([
-    { id: genId(), title: 'Win a hackathon this quarter', category: 'Career', deadline: weekDay(30), status: 'active', tasks: [
-      { id: genId(), text: 'Register for 3 hackathons', done: true  },
-      { id: genId(), text: 'Build a complete project',  done: false },
-      { id: genId(), text: 'Submit before deadline',    done: false },
+    { id: genId(), title: 'Win a competition this quarter', category: 'Career', deadline: weekDay(30), status: 'active', tasks: [
+      { id: genId(), text: 'Register for 3 competitions', done: true  },
+      { id: genId(), text: 'Build a complete project',    done: false },
+      { id: genId(), text: 'Submit before deadline',      done: false },
+    ]},
+    { id: genId(), title: 'Read 12 books this year', category: 'Personal', deadline: weekDay(180), status: 'active', tasks: [
+      { id: genId(), text: 'Read 1 book per month', done: false },
+      { id: genId(), text: 'Take notes on key ideas', done: false },
     ]},
   ]);
 
+  const [habits, setHabits] = useState([
+    { id: genId(), name: 'Morning exercise',    category: 'Fitness',   frequency: 'Daily',    target: '1', unit: 'times', color: '#10b981', note: '30 min minimum', streak: 0, completedDates: [today()], createdAt: today() },
+    { id: genId(), name: 'Read for 20 minutes', category: 'Learning',  frequency: 'Daily',    target: '1', unit: 'times', color: '#f59e0b', note: '',               streak: 0, completedDates: [],        createdAt: today() },
+    { id: genId(), name: 'Drink 8 glasses water',category: 'Health',   frequency: 'Daily',    target: '8', unit: 'glasses',color: '#00d4ff', note: '',              streak: 0, completedDates: [],        createdAt: today() },
+  ]);
+
+  const [hobbies, setHobbies] = useState([
+    { id: genId(), name: 'Watercolor Painting', category: 'Creative',  color: '#7c3aed', goalHoursPerWeek: '3', note: 'Relaxes my mind', nextSession: weekDay(2), loggedSessions: [] },
+    { id: genId(), name: 'Guitar Practice',     category: 'Music',     color: '#f59e0b', goalHoursPerWeek: '2', note: 'Learning fingerstyle', nextSession: weekDay(1), loggedSessions: [] },
+  ]);
+
   const [notes, setNotes] = useState([
-    { id: genId(), title: 'Hackathon Checklist', content: '[ ] README\n[ ] Deploy\n[ ] Demo video\n[ ] Devpost submission', color: '#00d4ff', pinned: true, created: today() },
+    { id: genId(), title: 'Project Checklist', content: '[ ] README\n[ ] Deploy\n[ ] Demo video\n[ ] Submit', color: '#00d4ff', pinned: true, created: today() },
   ]);
 
   const [socials, setSocials] = useState([
-    { id: genId(), platform: 'github',  handle: '@yourhandle', url: 'https://github.com',  followers: '200', bio: 'Open source contributor' },
-    { id: genId(), platform: 'twitter', handle: '@devhandle',  url: 'https://twitter.com', followers: '500', bio: 'Tweeting about dev life' },
+    { id: genId(), platform: 'github',  handle: '@yourhandle', url: 'https://github.com',  followers: '200', bio: 'Builder & creator' },
+    { id: genId(), platform: 'twitter', handle: '@devhandle',  url: 'https://twitter.com', followers: '500', bio: 'Sharing what I learn' },
   ]);
 
   const [people, setPeople] = useState([
-    { id: genId(), name: 'Alex Chen', role: 'Mentor', handle: '@alexchen', platform: 'twitter', metAt: 'ETHGlobal', note: 'Amazing Solidity mentor' },
+    { id: genId(), name: 'Alex Chen', role: 'Mentor', handle: '@alexchen', platform: 'twitter', metAt: 'ETHGlobal', note: 'Amazing mentor, very helpful' },
+  ]);
+
+  const [calls, setCalls] = useState([
+    { id: genId(), name: 'Dr. Sarah Ahmed', phone: '', type: 'Medical', direction: 'Outgoing', date: today(), duration: '15 min', summary: 'Annual checkup scheduled for next month.', followUp: 'Book appointment', followUpDate: weekDay(7), important: true },
   ]);
 
   const [content, setContent] = useState([
-    { id: genId(), title: 'How I almost missed my hackathon deadline', type: 'Blog Post', platform: 'Dev.to', scheduledDate: weekDay(7), status: 'drafting', topic: 'Time management for developers', link: '' },
+    { id: genId(), title: 'How I built my personal OS', type: 'Blog Post', platform: 'Dev.to', scheduledDate: weekDay(7), status: 'drafting', topic: 'Productivity systems', link: '' },
   ]);
 
   const [events, setEvents] = useState([
-    { id: genId(), name: 'React Summit 2025', type: 'conference', date: weekDay(14), location: 'Online', link: '', price: 'Free', registered: false, notes: '' },
+    { id: genId(), name: 'React Summit 2026', type: 'conference', date: weekDay(14), location: 'Online', link: '', price: 'Free', registered: false, notes: '' },
   ]);
 
   /* ── ALERTS ── */
   const { alerts, dismiss } = useAlerts(hackathons, learnings, events, user);
 
-  /* ── APPLY THEME ── */
+  /* ── THEME ── */
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 
-  /* ── ALL DATA bundle passed to pages that need it ── */
-  const allData = { hackathons, learnings, projects, jobs, goals, journal, events, bookmarks, people, socials, skills, notes, content };
+  /* ── ALL DATA ── */
+  const allData = {
+    hackathons, learnings, projects, jobs, goals, journal, events,
+    bookmarks, people, socials, skills, notes, content, habits, hobbies, calls,
+  };
 
   /* ── RENDER TAB ── */
   const renderTab = () => {
     switch (tab) {
-      case 'dashboard':    return <Dashboard      data={allData} />;
+      case 'dashboard':    return <Dashboard      data={allData} user={user} />;
       case 'hackathons':   return <Hackathons     data={hackathons}  setData={setHackathons} />;
       case 'projects':     return <Projects       data={projects}    setData={setProjects}   hackathons={hackathons} />;
       case 'jobs':         return <Jobs           data={jobs}        setData={setJobs} />;
@@ -125,29 +150,35 @@ export default function App() {
       case 'bookmarks':    return <Bookmarks      data={bookmarks}   setData={setBookmarks} />;
       case 'journal':      return <Journal        data={journal}     setData={setJournal} />;
       case 'goals':        return <Goals          data={goals}       setData={setGoals} />;
+      case 'habits':       return <Habits         data={habits}      setData={setHabits} />;
+      case 'hobbies':      return <Hobbies        data={hobbies}     setData={setHobbies} />;
       case 'notes':        return <Notes          data={notes}       setData={setNotes} />;
       case 'pomodoro':     return <Pomodoro />;
       case 'socials':      return <Socials        data={socials}     setData={setSocials} />;
       case 'people':       return <People         data={people}      setData={setPeople} />;
+      case 'calls':        return <Calls          data={calls}       setData={setCalls} />;
       case 'content':      return <ContentCalendar data={content}    setData={setContent} />;
       case 'events':       return <Events         data={events}      setData={setEvents} />;
       case 'ai':           return <AIInsights     data={allData}     user={user} />;
-      case 'stats':        return <WeeklyStats    hackathons={hackathons} learnings={learnings} projects={projects} journal={journal} goals={goals} />;
-      case 'achievements': return <Achievements   hackathons={hackathons} learnings={learnings} projects={projects} jobs={jobs} journal={journal} goals={goals} bookmarks={bookmarks} people={people} />;
+      case 'stats':        return <WeeklyStats    hackathons={hackathons} learnings={learnings} projects={projects} journal={journal} goals={goals} habits={habits} />;
+      case 'achievements': return <Achievements   hackathons={hackathons} learnings={learnings} projects={projects} jobs={jobs} journal={journal} goals={goals} bookmarks={bookmarks} people={people} habits={habits} />;
       case 'profile':      return <Profile        user={user} setUser={setUser} hackathons={hackathons} socials={socials} projects={projects} />;
       default:             return null;
     }
   };
 
-  /* ── AUTH WALL ── */
+  /* ── SPLASH / AUTH ── */
   if (!user) {
     return <AuthScreen onLogin={setUser} />;
   }
 
   /* ── MAIN SHELL ── */
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', background: 'var(--bg)', color: 'var(--txt)', transition: 'background .25s, color .25s' }}>
-
+    <div style={{
+      display: 'flex', height: '100vh', overflow: 'hidden',
+      background: 'var(--bg)', color: 'var(--txt)',
+      transition: 'background .25s, color .25s',
+    }}>
       <Sidebar
         open={sidebarOpen}
         tab={tab}
@@ -162,12 +193,10 @@ export default function App() {
           tab={tab}
           alerts={alerts}
           isDark={isDark}
-          onToggleSidebar={() => setSidebarOpen((o) => !o)}
-          onToggleTheme={() => setIsDark((d) => !d)}
+          onToggleSidebar={() => setSidebarOpen(o => !o)}
+          onToggleTheme={() => setIsDark(d => !d)}
         />
-
         <AlertsStrip alerts={alerts} onDismiss={dismiss} />
-
         <div style={{ flex: 1, overflowY: 'auto', padding: '24px 24px 48px' }}>
           {renderTab()}
         </div>

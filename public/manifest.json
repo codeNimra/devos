@@ -1,0 +1,21 @@
+{
+  "name": "LifeOS — Personal Operating System",
+  "short_name": "LifeOS",
+  "description": "Your personal operating system for work, health, goals, and life",
+  "start_url": "/devos/",
+  "scope": "/devos/",
+  "display": "standalone",
+  "background_color": "#05050f",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300d4ff'/><text y='.9em' font-size='80' x='10'>⌘</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "lifestyle", "health"],
+  "prefer_related_applications": false
+}

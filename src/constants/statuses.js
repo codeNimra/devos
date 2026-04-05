@@ -31,12 +31,14 @@ export const CONTENT_STATUS = {
 };
 
 export const EVENT_TYPES = {
-  hackathon:  { label: 'Hackathon',  color: '#00d4ff', icon: '🏆' },
-  meetup:     { label: 'Meetup',     color: '#10b981', icon: '🤝' },
-  conference: { label: 'Conference', color: '#7c3aed', icon: '🎤' },
-  workshop:   { label: 'Workshop',   color: '#f59e0b', icon: '🛠' },
-  webinar:    { label: 'Webinar',    color: '#3b82f6', icon: '💻' },
-  other:      { label: 'Other',      color: '#64748b', icon: '📅' },
+  hackathon:   { label: 'Hackathon',   color: '#00d4ff', icon: '🏆' },
+  meetup:      { label: 'Meetup',      color: '#10b981', icon: '🤝' },
+  conference:  { label: 'Conference',  color: '#7c3aed', icon: '🎤' },
+  workshop:    { label: 'Workshop',    color: '#f59e0b', icon: '🛠' },
+  webinar:     { label: 'Webinar',     color: '#3b82f6', icon: '💻' },
+  appointment: { label: 'Appointment', color: '#f43f5e', icon: '🏥' },
+  family:      { label: 'Family',      color: '#10b981', icon: '👨‍👩‍👧' },
+  other:       { label: 'Other',       color: '#64748b', icon: '📅' },
 };
 
 export const SKILL_LEVELS = [
@@ -47,22 +49,52 @@ export const SKILL_LEVELS = [
   { label: 'Expert',     color: '#10b981', val: 5 },
 ];
 
-export const SKILL_CATS   = ['Language', 'Framework', 'Database', 'DevOps', 'Tool', 'AI/ML', 'Cloud', 'Other'];
-export const LEARN_CATS   = ['Frontend', 'Backend', 'DevOps', 'AI/ML', 'Blockchain', 'DSA', 'System Design', 'Mobile', 'Security', 'Other'];
+/* ── UNIVERSAL SKILL CATEGORIES — works for any field ── */
+export const SKILL_CATS = [
+  /* Tech */
+  'Programming', 'Framework/Library', 'Database', 'DevOps/Cloud', 'AI/ML', 'Tools & Software',
+  /* Medical & Health */
+  'Clinical/Medical', 'Healthcare', 'Research',
+  /* Creative & Design */
+  'Design', 'Creative Arts', 'Writing',
+  /* Business & Management */
+  'Management', 'Finance & Accounting', 'Marketing', 'Sales',
+  /* Personal & Soft */
+  'Language', 'Communication', 'Leadership',
+  /* Other */
+  'Other',
+];
+
+export const LEARN_CATS   = [
+  'Technology', 'Medicine & Health', 'Business', 'Design & Art',
+  'Science', 'Language', 'Finance', 'Personal Development',
+  'Engineering', 'Law', 'Education', 'Other',
+];
+
 export const CONTENT_TYPES = ['Blog Post', 'Tweet Thread', 'LinkedIn Post', 'YouTube Video', 'Dev.to Article', 'Tutorial', 'Newsletter', 'Other'];
-export const NOTE_COLORS  = ['#00d4ff', '#7c3aed', '#10b981', '#f59e0b', '#ef4444', '#f43f5e', '#06b6d4'];
+export const NOTE_COLORS   = ['#00d4ff', '#7c3aed', '#10b981', '#f59e0b', '#ef4444', '#f43f5e', '#06b6d4'];
 
 export const CAT_COLORS = {
-  Frontend:       '#00d4ff',
-  Backend:        '#7c3aed',
-  DevOps:         '#f59e0b',
-  'AI/ML':        '#10b981',
-  Blockchain:     '#3b82f6',
-  DSA:            '#f43f5e',
-  'System Design':'#8b5cf6',
-  Mobile:         '#06b6d4',
-  Security:       '#ef4444',
-  Other:          '#64748b',
+  'Programming':        '#00d4ff',
+  'Framework/Library':  '#7c3aed',
+  'Database':           '#f59e0b',
+  'DevOps/Cloud':       '#3b82f6',
+  'AI/ML':              '#10b981',
+  'Tools & Software':   '#06b6d4',
+  'Clinical/Medical':   '#ef4444',
+  'Healthcare':         '#f43f5e',
+  'Research':           '#8b5cf6',
+  'Design':             '#f59e0b',
+  'Creative Arts':      '#7c3aed',
+  'Writing':            '#10b981',
+  'Management':         '#3b82f6',
+  'Finance & Accounting':'#f59e0b',
+  'Marketing':          '#00d4ff',
+  'Sales':              '#10b981',
+  'Language':           '#8b5cf6',
+  'Communication':      '#06b6d4',
+  'Leadership':         '#f43f5e',
+  'Other':              '#64748b',
 };
 
 export const ROLE_COLORS = {
@@ -71,15 +103,17 @@ export const ROLE_COLORS = {
   Friend:       '#f59e0b',
   Recruiter:    '#8b5cf6',
   Collaborator: '#3b82f6',
+  Doctor:       '#ef4444',
+  Teacher:      '#f43f5e',
   Other:        '#64748b',
 };
 
 export const MOODS = [
   { val: 1, icon: '😞', label: 'Rough' },
-  { val: 2, icon: '😐', label: 'Meh' },
-  { val: 3, icon: '🙂', label: 'Okay' },
-  { val: 4, icon: '😊', label: 'Good' },
-  { val: 5, icon: '🚀', label: 'Epic' },
+  { val: 2, icon: '😐', label: 'Meh'   },
+  { val: 3, icon: '🙂', label: 'Okay'  },
+  { val: 4, icon: '😊', label: 'Good'  },
+  { val: 5, icon: '🚀', label: 'Epic'  },
 ];
 
 export const BM_COLORS = {
@@ -89,5 +123,6 @@ export const BM_COLORS = {
   Video:    '#ef4444',
   Tool:     '#10b981',
   Course:   '#f59e0b',
+  Book:     '#f43f5e',
   Other:    '#64748b',
 };

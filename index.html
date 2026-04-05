@@ -3,8 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevOS — Developer Command Center</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="LifeOS — Personal Operating System for work, health, goals, and life" />
+    <meta name="theme-color" content="#00d4ff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LifeOS" />
+    <link rel="manifest" href="/devos/manifest.json" />
+    <title>LifeOS — Personal Operating System</title>
+    <script>
+      // Register service worker for offline support
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/devos/sw.js')
+            .then(() => console.log('LifeOS: offline ready'))
+            .catch(() => {});
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
