@@ -1,14 +1,14 @@
-# ⌘ DevOS — Personal Developer Command Center
+# ⌘ LifeOS | Personal Operating System
 
 <div align="center">
 
-![DevOS Banner](https://img.shields.io/badge/DevOS-AI%20Powered-00d4ff?style=for-the-badge&logo=react&logoColor=white)
-![Built with React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![LifeOS](https://img.shields.io/badge/LifeOS-Personal%20OS-00d4ff?style=for-the-badge&logo=react&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Claude AI](https://img.shields.io/badge/Claude-AI%20Coach-7c3aed?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)
+![PWA](https://img.shields.io/badge/PWA-Offline%20Ready-10b981?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-7c3aed?style=for-the-badge)
 
-**The all-in-one OS for developers who want to ship more, miss less, and grow faster.**
+**One home for your work, health, goals, and life.**
 
 [🚀 Live Demo](https://codenimra.github.io/devos/)
 
@@ -16,264 +16,236 @@
 
 ---
 
-## 🧠 What is DevOS?
+## What is LifeOS?
 
-DevOS is a personal developer dashboard that centralizes everything a developer needs to stay productive hackathons, jobs, learning goals, projects, journal, notes, and more all in one dark-themed command center with a built-in **AI Coach** that analyzes your data and tells you exactly what to focus on.
+LifeOS is a personal operating system a complete life management platform built for every kind of person. Not just developers. Not just students. Anyone who has a life to manage.
 
-Built for developers who:
-- Miss hackathon deadlines
-- Lose track of job applications
-- Forget what they planned to learn
-- Want smart insights without switching between 10 tools
+A software engineer tracks projects and job applications. A medical student logs study sessions and clinical skills. A parent stores emergency contacts and family events. A freelancer manages clients and content. A homemaker organizes habits and household goals. One app. Every field. Every life.
+
+LifeOS runs entirely in the browser, works offline, installs like a native app, and requires no account or password — just your name, and your OS is ready.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🏆 Work Tracking
-| Feature | Description |
+### ⌘ Home
+A personalized dashboard that greets you by name and time of day, shows a daily motivation quote rotating every 24 hours, surfaces your priority queue, today's habit progress, active goals, and upcoming events at a glance.
+
+### 💼 Work
+| Module | Description |
 |---|---|
-| **Hackathons** | Track deadlines with urgency colors — red if due today, amber if urgent |
-| **Projects** | Link projects to hackathons, track build status and GitHub/demo links |
-| **Jobs** | Full job application pipeline from wishlist → offer with deadline alerts |
+| **Competitions** | Track hackathons, challenges, and grants with color-coded deadline urgency |
+| **Opportunities** | Full pipeline: wishlist → applied → interviewing → offer |
+| **Projects** | Link projects to competitions, track status, GitHub and demo links |
+| **Learning** | Schedule sessions with deadlines, categories, and resources |
+| **Skills** | Visual proficiency map across 20 universal categories — tech, medical, creative, business, and more |
 
-### 📚 Learning & Skills
-| Feature | Description |
+### 🔨 Build
+| Module | Description |
 |---|---|
-| **Learning** | Schedule learning sessions with categories, durations, and status tracking |
-| **Skills Map** | Visual skill levels (Beginner → Expert) across languages, frameworks, tools |
-| **Bookmarks** | Save resources by category with tags and notes |
+| **Goals** | Goal tracking with sub-tasks, progress bars, categories, and deadlines |
+| **Habits** | Daily habit tracker with 7-day streak dots and 🔥 streak counter |
+| **Exercise** | Log workouts, set wake/sleep/exercise times, track weekly stats |
+| **Books** | Reading list with progress bars, star ratings, key takeaways, and yearly count |
+| **Hobbies** | Schedule hobby time with weekly hour goals and session logging |
+| **Notes** | Color-coded pinnable notes |
+| **Focus** | Built-in Pomodoro focus timer |
 
-### 🧘 Personal Dev Life
-| Feature | Description |
+### 🔗 Connect
+| Module | Description |
 |---|---|
-| **Dev Journal** | Daily logs with mood tracking (1–5 scale) and tags |
-| **Goals** | Goal tracking with sub-tasks, progress bars, and deadlines |
-| **Quick Notes** | Color-coded pinnable notes |
-| **Pomodoro** | Built-in focus timer |
+| **People** | Contact manager for mentors, colleagues, recruiters, doctors, friends |
+| **Calls** | Log every important call with summary, follow-up action, and due date |
+| **Events** | Track conferences, appointments, meetups, and family events |
+| **Content** | Plan blog posts, videos, and social content with scheduled dates |
+| **Socials** | All profiles in one place with follower tracking |
 
-### 🌐 Network & Social
-| Feature | Description |
+### 👤 You
+| Module | Description |
 |---|---|
-| **Socials** | Track all your developer profiles in one place |
-| **People** | CRM for mentors, teammates, recruiters you meet |
-| **Content Calendar** | Plan blog posts, tweets, videos with scheduled dates |
-| **Events** | Track conferences, meetups, hackathons with registration status |
+| **AI Coach** | Instant smart analysis — priority queue, productivity score, mood trend, suggestions |
+| **Journal** | Daily entries with 1–5 mood tracking and tags |
+| **Medical** | Emergency contacts, blood type, medications, allergies, and health conditions |
+| **Weekly Review** | Progress summary across all sections |
+| **Wins** | Achievement tracker that unlocks based on real activity |
+| **Profile** | Your info, field, and personal overview |
 
-### ✦ AI Coach (Smart Analysis)
-The crown feature. The AI Coach analyzes your entire dev life — deadlines, goals, mood, skills, journal entries — and returns a personalized action plan instantly:
+---
 
-- **Productivity Score**: calculated from your real data
-- **Priority Queue**: color-coded urgent items (red = today, amber = urgent, purple = follow up)
-- **Smart Suggestions**: specific advice based on your actual hackathons, goals and mood
-- **Mood Trend**: visual chart from your journal entries
-- **Progress Breakdown**: learning, goals, and journal completion rates
-- **Skill Distribution**: breakdown of your skills by category
+## ✦ AI Coach
 
-### 💡 Daily Motivation
-Every time you open the Dashboard, a fresh developer quote greets you — rotates daily, always relevant.
+The AI Coach analyzes your real data and returns actionable insight instantly, with no API key and no internet required.
+
+```
+Open AI Coach
+      ↓
+Local engine reads: deadlines · mood entries · habit streaks
+                    goal progress · skill gaps · job pipeline
+      ↓
+Returns in under 1 second:
+  • Productivity score (0–100)
+  • Priority queue — color-coded by urgency
+  • Smart suggestions — based on your actual patterns
+  • Mood trend chart — from journal entries
+  • Progress breakdown — learning, goals, habits
+  • Skill distribution — by category
+```
 
 ---
 
 ## 🏗 Architecture
 
-![DevOS Architecture](docs/architecture.svg)
+![LifeOS Architecture](docs/architecture.svg)
 
-### Project Structure
+### Project structure
 
 ```
-devos/
-├── index.html
+lifeos/
+├── index.html                    # PWA entry — registers service worker
 ├── package.json
 ├── vite.config.js
-├── docs/
-│   └── architecture.svg
+├── public/
+│   ├── manifest.json             # PWA manifest — install as app
+│   └── sw.js                     # Service worker — offline caching
 └── src/
-    ├── main.jsx                  # Entry point
-    ├── App.jsx                   # Root state + routing
+    ├── main.jsx
+    ├── App.jsx                   # Root — state, routing, all 25 modules
     ├── styles/
-    │   └── globals.css           # CSS variables, dark/light themes, utility classes
+    │   └── globals.css
     ├── constants/
-    │   ├── nav.js                # Sidebar navigation structure
-    │   ├── statuses.js           # All status enums + color maps
-    │   └── platforms.js          # Social platform colors + icons
+    │   ├── nav.js                # 5 groups, 25 sidebar items
+    │   ├── statuses.js           # Universal skill categories + all status maps
+    │   └── platforms.js
     ├── utils/
-    │   ├── id.js                 # genId() unique ID generator
-    │   ├── dates.js              # daysUntil, fmtDate, today, weekDay
-    │   └── colors.js             # urgColorHex, urgLabel deadline urgency colors
+    │   ├── id.js
+    │   ├── dates.js
+    │   └── colors.js
     ├── hooks/
-    │   └── useAlerts.js          # Auto-generates alerts for urgent deadlines
+    │   └── useAlerts.js
     ├── components/
-    │   ├── index.js              # Barrel export
-    │   ├── Modal.jsx             # Reusable modal overlay
-    │   ├── Field.jsx             # Form field with label
-    │   ├── Empty.jsx             # Empty state component
-    │   └── ThemeToggle.jsx       # Dark/light switch
+    │   ├── Modal.jsx
+    │   ├── Field.jsx
+    │   ├── Empty.jsx
+    │   ├── ThemeToggle.jsx
+    │   └── index.js
     ├── layout/
-    │   ├── Sidebar.jsx           # Navigation sidebar
-    │   ├── TopBar.jsx            # Header with tab title + controls
-    │   └── AlertsStrip.jsx       # Dismissible alert bar
-    └── pages/                    # 19 page components
-        ├── AuthScreen.jsx
-        ├── Dashboard.jsx         # ✦ Daily motivational quote
-        ├── Hackathons.jsx
-        ├── Projects.jsx
-        ├── Jobs.jsx
-        ├── Learning.jsx
-        ├── Skills.jsx
-        ├── Bookmarks.jsx
-        ├── Journal.jsx
-        ├── Goals.jsx
-        ├── Notes.jsx
-        ├── Pomodoro.jsx
-        ├── Socials.jsx
-        ├── People.jsx
-        ├── ContentCalendar.jsx
-        ├── Events.jsx
-        ├── AIInsights.jsx        # ✦ Smart AI Coach (no API needed)
-        ├── WeeklyStats.jsx
-        ├── Achievements.jsx
-        └── Profile.jsx
+    │   ├── Sidebar.jsx
+    │   ├── TopBar.jsx
+    │   └── AlertsStrip.jsx
+    └── pages/
+        ├── AuthScreen.jsx        # Splash screen — name + field only
+        ├── Dashboard.jsx         # ⌘  Daily quote · priority queue · habit progress
+        ├── Hackathons.jsx        # 🏆  Competitions
+        ├── Jobs.jsx              # 💼  Opportunities
+        ├── Projects.jsx          # 🚀  Projects
+        ├── Learning.jsx          # 📚  Learning
+        ├── Skills.jsx            # 🧩  Skills — 20 universal categories
+        ├── Goals.jsx             # 🎯  Goals
+        ├── Habits.jsx            # ✅  Habits + streak tracker
+        ├── Exercise.jsx          # 💪  Exercise + daily schedule
+        ├── Books.jsx             # 📖  Books + reading progress
+        ├── Hobbies.jsx           # 🎨  Hobbies + session logging
+        ├── Notes.jsx             # 📋  Notes
+        ├── Pomodoro.jsx          # ⏱   Focus timer
+        ├── People.jsx            # 🤝  People
+        ├── Calls.jsx             # 📞  Call log + follow-ups
+        ├── Events.jsx            # 🗓  Events
+        ├── ContentCalendar.jsx   # 📣  Content
+        ├── Socials.jsx           # 🌐  Socials
+        ├── AIInsights.jsx        # ✦   AI Coach — local smart analysis
+        ├── Journal.jsx           # 📓  Journal + mood tracking
+        ├── Medical.jsx           # 🏥  Emergency contacts · medications · allergies
+        ├── WeeklyStats.jsx       # 📊  Weekly review
+        ├── Achievements.jsx      # 🏅  Wins
+        └── Profile.jsx           # 👤  Profile
 ```
 
 ---
 
 ## ⚡ Quick Start
 
-### Prerequisites
+### Requirements
 - Node.js 18+
-- npm or yarn
+- npm
 
-### Installation
+### Run locally
 
 ```bash
-# Clone the repo
 git clone https://github.com/codeNimra/devos.git
 cd devos
-
-# Install dependencies
 npm install
-
-# Start dev server
 npm run dev
 ```
 
-Open `http://localhost:5173` and log in with:
-```
-Email:    demo@dev.com
-Password: demo123
-```
+Open `http://localhost:5173`, enter your name, and your OS is ready.
 
-### Build for Production
+### Try the live demo
 
-```bash
-npm run build
-```
+[codenimra.github.io/devos](https://codenimra.github.io/devos/)  no login, no setup.
 
 ---
 
-## 🚀 Deploy to GitHub Pages
-
-This project is live at [codenimra.github.io/devos](https://codenimra.github.io/devos/).
-
-### Deploy your own fork
+## Deploy
 
 ```bash
-# Install gh-pages
-npm install gh-pages --save-dev
-
-# Build and deploy in one command
 npm run deploy
 ```
 
-Your site goes live at `https://<your-username>.github.io/devos` in ~2 minutes.
-
-The `deploy` script builds the app and pushes `dist/` to the `gh-pages` branch automatically GitHub Pages serves from there.
+Builds and pushes `dist/` to the `gh-pages` branch. Live in approximately two minutes at `https://<codenimra>.github.io/devos`.
 
 ---
 
-## 🎨 Design System
+## Offline / PWA
 
-| Token | Dark | Light |
+LifeOS is a fully installable Progressive Web App. On first load, the service worker caches all assets. On every visit after with or without an internet connection LifeOS loads instantly. On any device, install it to the home screen and use it like a native app.
+
+---
+
+## Design System
+
+| Token | Dark mode | Light mode |
 |---|---|---|
-| Background | `#070711` | `#f0f4f8` |
-| Surface | `#0c0c1a` | `#ffffff` |
-| Cyan Accent | `#00d4ff` | `#00d4ff` |
-| Purple Accent | `#7c3aed` | `#7c3aed` |
-| Text Primary | `#e2e8f0` | `#0f172a` |
-| Font | Space Mono + Syne | Space Mono + Syne |
+| Background | `#05050f` | `#f0f4f8` |
+| Surface | `#0a0a1a` | `#ffffff` |
+| Cyan accent | `#00d4ff` | `#00d4ff` |
+| Purple accent | `#7c3aed` | `#7c3aed` |
+| Text primary | `#f1f5f9` | `#0f172a` |
+| Fonts | Space Mono + Syne | Space Mono + Syne |
 
-Themes switch via `data-theme` attribute on `<html>`  no flash, instant.
-
----
-
-## 🤖 AI Coach - How It Works
-
-```
-User opens AI Coach page
-         ↓
-App analyzes: hackathons + goals + learnings
-            + journal mood + skills + jobs
-         ↓
-Instant results no API call needed:
-{
-  productivity_score,
-  priority_queue,
-  smart_suggestions,
-  mood_trend,
-  progress_breakdown,
-  skill_distribution
-}
-         ↓
-UI renders personalized action plan
-```
-
-All analysis runs locally in the browser instant, private, no API key required.
+Themes switch via `data-theme` on `<html>` — instant, no flash.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Frontend | React 18 |
-| Build Tool | Vite 5 |
-| Styling | Pure CSS + CSS Variables (no Tailwind) |
-| AI Analysis | Smart client-side logic + Anthropic Claude API ready |
-| Fonts | Google Fonts Space Mono + Syne |
-| State | React useState (no Redux, no localStorage) |
-| Auth | Simulated local auth (demo mode) |
+| UI | React 18 |
+| Build | Vite 5 |
+| Styling | Pure CSS + CSS Variables |
+| AI Analysis | Smart client-side engine — local, instant, private |
+| PWA | Service Worker + Web Manifest |
+| Fonts | Google Fonts — Space Mono + Syne |
+| State | React useState |
 | Deploy | GitHub Pages |
 
 ---
 
-## 📋 .gitignore
+## Built For
 
-```
-node_modules/
-dist/
-.env
-.env.local
-```
-
-Everything else including `package-lock.json` is committed intentionally.
+**Frostbyte Hackathon Grand Finale 2026**
+Themes: Business Management Tools · AI/ML · Software Development · Healthcare & BioTech
 
 ---
 
-## 🏁 Built For
-
-This project was built for the **Frostbyte Hackathon 2026** under the theme: *Business & Management Tools + AI/ML*.
-
----
-
-## 📄 License
+## License
 
 MIT free to use, fork, and build on.
 
 ---
 
 <div align="center">
-  Made with 🤖 + ☕ by a developer who kept missing deadlines
+  Made by <a href="https://github.com/codeNimra">Nimra Abid</a>
   <br/>
-  <sub>Built with React · Smart AI Analysis · Hosted on GitHub Pages</sub>
+  <sub>React 18 · Vite 5 · Pure CSS · PWA · GitHub Pages</sub>
 </div>

@@ -1,160 +1,181 @@
-<svg viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+<svg viewBox="0 0 960 700" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
   <defs>
     <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
     </linearGradient>
     <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0c0c1a"/>
-      <stop offset="100%" style="stop-color:#070711"/>
-    </linearGradient>
-    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#05050f"/>
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="640" fill="url(#bg)" rx="16"/>
-  <rect width="900" height="640" fill="none" stroke="#26264a" stroke-width="1.5" rx="16"/>
+  <rect width="960" height="700" fill="url(#bg)" rx="16"/>
+  <rect width="960" height="700" fill="none" stroke="#1a1a35" stroke-width="1.5" rx="16"/>
 
-  <!-- Title -->
-  <rect x="300" y="18" width="300" height="36" rx="10" fill="url(#hdr)" opacity="0.15"/>
-  <rect x="300" y="18" width="300" height="36" rx="10" fill="none" stroke="url(#hdr)" stroke-width="1"/>
-  <text x="450" y="41" text-anchor="middle" fill="url(#hdr)" font-size="14" font-weight="bold" letter-spacing="2">⌘ DEVOS ARCHITECTURE</text>
+  <!-- TITLE -->
+  <rect x="330" y="16" width="300" height="38" rx="10" fill="url(#hdr)" opacity="0.12"/>
+  <rect x="330" y="16" width="300" height="38" rx="10" fill="none" stroke="url(#hdr)" stroke-width="1"/>
+  <text x="480" y="40" text-anchor="middle" fill="#00d4ff" font-size="14" font-weight="bold" letter-spacing="2">⌘ LIFEOS ARCHITECTURE</text>
 
-  <!-- USER BROWSER -->
-  <rect x="30" y="80" width="840" height="80" rx="10" fill="#0f0f22" stroke="#1e1e3a" stroke-width="1"/>
-  <text x="450" y="100" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">USER BROWSER</text>
-  <rect x="120" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="175" y="128" text-anchor="middle" fill="#00d4ff" font-size="10" font-weight="bold">React 18</text>
-  <rect x="250" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#7c3aed33"/>
-  <text x="305" y="128" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold">Vite 5 (HMR)</text>
-  <rect x="380" y="108" width="130" height="32" rx="7" fill="#13132a" stroke="#10b98133"/>
-  <text x="445" y="128" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">CSS Variables</text>
-  <rect x="530" y="108" width="130" height="32" rx="7" fill="#13132a" stroke="#f59e0b33"/>
-  <text x="595" y="128" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="bold">Space Mono + Syne</text>
-  <rect x="680" y="108" width="110" height="32" rx="7" fill="#13132a" stroke="#3b82f633"/>
-  <text x="735" y="128" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="bold">In-Memory State</text>
+  <!-- ROW 1: BROWSER -->
+  <rect x="24" y="70" width="912" height="70" rx="10" fill="#0d0d20" stroke="#1a1a35"/>
+  <text x="480" y="88" text-anchor="middle" fill="#334155" font-size="9" letter-spacing="2">BROWSER LAYER</text>
+  <rect x="60"  y="94" width="110" height="26" rx="7" fill="#111128" stroke="#00d4ff22"/>
+  <text x="115" y="111" text-anchor="middle" fill="#00d4ff" font-size="10" font-weight="bold">React 18</text>
+  <rect x="180" y="94" width="110" height="26" rx="7" fill="#111128" stroke="#7c3aed22"/>
+  <text x="235" y="111" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold">Vite 5</text>
+  <rect x="300" y="94" width="110" height="26" rx="7" fill="#111128" stroke="#10b98122"/>
+  <text x="355" y="111" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">CSS Variables</text>
+  <rect x="420" y="94" width="130" height="26" rx="7" fill="#111128" stroke="#f59e0b22"/>
+  <text x="485" y="111" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="bold">Space Mono + Syne</text>
+  <rect x="560" y="94" width="120" height="26" rx="7" fill="#111128" stroke="#3b82f622"/>
+  <text x="620" y="111" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="bold">useState only</text>
+  <rect x="690" y="94" width="110" height="26" rx="7" fill="#111128" stroke="#10b98122"/>
+  <text x="745" y="111" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">PWA + Offline</text>
+  <rect x="810" y="94" width="102" height="26" rx="7" fill="#111128" stroke="#f43f5e22"/>
+  <text x="861" y="111" text-anchor="middle" fill="#f43f5e" font-size="10" font-weight="bold">Dark / Light</text>
 
-  <!-- APP SHELL -->
-  <rect x="30" y="178" width="840" height="70" rx="10" fill="#0c0c1a" stroke="#191932"/>
-  <text x="450" y="196" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">APP SHELL  —  src/App.jsx</text>
-  <rect x="80"  y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="130" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">AuthScreen</text>
-  <rect x="195" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="245" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">useState (19x)</text>
-  <rect x="310" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="360" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">useAlerts Hook</text>
-  <rect x="425" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="475" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Theme Toggle</text>
-  <rect x="540" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="590" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Tab Router</text>
-  <rect x="655" y="202" width="100" height="28" rx="6" fill="#0f0f22" stroke="#00d4ff22"/>
-  <text x="705" y="220" text-anchor="middle" fill="#e2e8f0" font-size="10">Data Prop Drill</text>
+  <line x1="480" y1="140" x2="480" y2="154" stroke="#1a1a35" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- LAYOUT -->
-  <rect x="30" y="265" width="250" height="100" rx="10" fill="#0c0c1a" stroke="#191932"/>
-  <text x="155" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">LAYOUT  —  src/layout/</text>
-  <rect x="48" y="291" width="200" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
-  <text x="148" y="307" text-anchor="middle" fill="#7c3aed" font-size="10">Sidebar.jsx  (NAV groups)</text>
-  <rect x="48" y="320" width="95" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
-  <text x="96" y="336" text-anchor="middle" fill="#7c3aed" font-size="10">TopBar.jsx</text>
-  <rect x="153" y="320" width="95" height="24" rx="6" fill="#0f0f22" stroke="#7c3aed22"/>
-  <text x="200" y="336" text-anchor="middle" fill="#7c3aed" font-size="10">AlertsStrip.jsx</text>
+  <!-- ROW 2: APP SHELL -->
+  <rect x="24" y="154" width="912" height="56" rx="10" fill="#0a0a1a" stroke="#191932"/>
+  <text x="480" y="171" text-anchor="middle" fill="#334155" font-size="9" letter-spacing="2">APP SHELL — App.jsx · layout/</text>
+  <rect x="50"  y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="100" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">AuthScreen</text>
+  <rect x="160" y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="210" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">Sidebar</text>
+  <rect x="270" y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="320" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">TopBar</text>
+  <rect x="380" y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="430" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">AlertsStrip</text>
+  <rect x="490" y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="540" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">Tab Router</text>
+  <rect x="600" y="178" width="120" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="660" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">useAlerts Hook</text>
+  <rect x="730" y="178" width="100" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="780" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">Theme Toggle</text>
+  <rect x="840" y="178" width="80" height="22" rx="6" fill="#0d0d22" stroke="#00d4ff18"/>
+  <text x="880" y="193" text-anchor="middle" fill="#cbd5e1" font-size="10">genId · utils</text>
 
-  <!-- COMPONENTS -->
-  <rect x="295" y="265" width="200" height="100" rx="10" fill="#0c0c1a" stroke="#191932"/>
-  <text x="395" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">COMPONENTS</text>
-  <rect x="313" y="291" width="160" height="24" rx="6" fill="#0f0f22" stroke="#10b98122"/>
-  <text x="393" y="307" text-anchor="middle" fill="#10b981" font-size="10">Modal · Field · Empty</text>
-  <rect x="313" y="320" width="160" height="24" rx="6" fill="#0f0f22" stroke="#10b98122"/>
-  <text x="393" y="336" text-anchor="middle" fill="#10b981" font-size="10">ThemeToggle + index.js</text>
+  <line x1="480" y1="210" x2="480" y2="224" stroke="#1a1a35" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- UTILS + HOOKS -->
-  <rect x="510" y="265" width="360" height="100" rx="10" fill="#0c0c1a" stroke="#191932"/>
-  <text x="690" y="283" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">UTILS + HOOKS + CONSTANTS</text>
-  <rect x="528" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="566" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">dates.js</text>
-  <rect x="614" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="652" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">colors.js</text>
-  <rect x="700" y="291" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="738" y="307" text-anchor="middle" fill="#f59e0b" font-size="10">id.js</text>
-  <rect x="528" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="566" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">nav.js</text>
-  <rect x="614" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="652" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">statuses.js</text>
-  <rect x="700" y="320" width="76" height="24" rx="6" fill="#0f0f22" stroke="#f59e0b22"/>
-  <text x="738" y="336" text-anchor="middle" fill="#f59e0b" font-size="10">useAlerts.js</text>
+  <!-- ROW 3: 5 SECTIONS -->
+  <!-- HOME -->
+  <rect x="24" y="224" width="112" height="162" rx="10" fill="#0a0a1a" stroke="#00d4ff28"/>
+  <text x="80" y="242" text-anchor="middle" fill="#00d4ff" font-size="9" font-weight="bold" letter-spacing="1">⌘ HOME</text>
+  <rect x="32" y="248" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="261" text-anchor="middle" fill="#94a3b8" font-size="9">Dashboard</text>
+  <rect x="32" y="271" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="284" text-anchor="middle" fill="#94a3b8" font-size="9">Daily Quote</text>
+  <rect x="32" y="294" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="307" text-anchor="middle" fill="#94a3b8" font-size="9">Priority Queue</text>
+  <rect x="32" y="317" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">Habits Today</text>
+  <rect x="32" y="340" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">Active Goals</text>
+  <rect x="32" y="363" width="96" height="19" rx="5" fill="#0d0d22" stroke="#00d4ff15"/>
+  <text x="80" y="376" text-anchor="middle" fill="#94a3b8" font-size="9">Upcoming Events</text>
 
-  <!-- 19 PAGES -->
-  <rect x="30" y="382" width="840" height="150" rx="10" fill="#0c0c1a" stroke="#191932"/>
-  <text x="450" y="400" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">19 PAGES  —  src/pages/</text>
+  <!-- WORK -->
+  <rect x="146" y="224" width="172" height="162" rx="10" fill="#0a0a1a" stroke="#7c3aed28"/>
+  <text x="232" y="242" text-anchor="middle" fill="#7c3aed" font-size="9" font-weight="bold" letter-spacing="1">💼 WORK</text>
+  <rect x="154" y="248" width="156" height="19" rx="5" fill="#0d0d22" stroke="#7c3aed15"/>
+  <text x="232" y="261" text-anchor="middle" fill="#94a3b8" font-size="9">🏆 Competitions</text>
+  <rect x="154" y="271" width="156" height="19" rx="5" fill="#0d0d22" stroke="#7c3aed15"/>
+  <text x="232" y="284" text-anchor="middle" fill="#94a3b8" font-size="9">💼 Opportunities</text>
+  <rect x="154" y="294" width="156" height="19" rx="5" fill="#0d0d22" stroke="#7c3aed15"/>
+  <text x="232" y="307" text-anchor="middle" fill="#94a3b8" font-size="9">🚀 Projects</text>
+  <rect x="154" y="317" width="156" height="19" rx="5" fill="#0d0d22" stroke="#7c3aed15"/>
+  <text x="232" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">📚 Learning</text>
+  <rect x="154" y="340" width="156" height="19" rx="5" fill="#0d0d22" stroke="#7c3aed15"/>
+  <text x="232" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">🧩 Skills (20 categories)</text>
+  <rect x="154" y="363" width="156" height="19" rx="5" fill="#7c3aed12" stroke="#7c3aed30"/>
+  <text x="232" y="376" text-anchor="middle" fill="#7c3aed" font-size="9">Tech · Medical · Business · Design</text>
 
-  <!-- Row 1 -->
-  <rect x="48"  y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="92"  y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Dashboard ✦</text>
-  <rect x="146" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="190" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Hackathons</text>
-  <rect x="244" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="288" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Projects</text>
-  <rect x="342" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="386" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Jobs</text>
-  <rect x="440" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="484" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Learning</text>
-  <rect x="538" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="582" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Skills</text>
-  <rect x="636" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="680" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Bookmarks</text>
-  <rect x="734" y="408" width="88" height="26" rx="6" fill="#13132a" stroke="#00d4ff33"/>
-  <text x="778" y="425" text-anchor="middle" fill="#00d4ff" font-size="9">Journal</text>
+  <!-- BUILD -->
+  <rect x="328" y="224" width="196" height="162" rx="10" fill="#0a0a1a" stroke="#10b98128"/>
+  <text x="426" y="242" text-anchor="middle" fill="#10b981" font-size="9" font-weight="bold" letter-spacing="1">🔨 BUILD</text>
+  <rect x="336" y="248" width="180" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="426" y="261" text-anchor="middle" fill="#94a3b8" font-size="9">🎯 Goals + sub-tasks</text>
+  <rect x="336" y="271" width="180" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="426" y="284" text-anchor="middle" fill="#94a3b8" font-size="9">✅ Habits + 7-day streaks</text>
+  <rect x="336" y="294" width="180" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="426" y="307" text-anchor="middle" fill="#94a3b8" font-size="9">💪 Exercise + daily schedule</text>
+  <rect x="336" y="317" width="180" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="426" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">📖 Books + progress + rating</text>
+  <rect x="336" y="340" width="86" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="379" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">🎨 Hobbies</text>
+  <rect x="430" y="340" width="86" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="473" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">📋 Notes</text>
+  <rect x="336" y="363" width="180" height="19" rx="5" fill="#0d0d22" stroke="#10b98115"/>
+  <text x="426" y="376" text-anchor="middle" fill="#94a3b8" font-size="9">⏱ Focus Timer (Pomodoro)</text>
 
-  <!-- Row 2 -->
-  <rect x="48"  y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="92"  y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Goals</text>
-  <rect x="146" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="190" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Notes</text>
-  <rect x="244" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="288" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Pomodoro</text>
-  <rect x="342" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="386" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Socials</text>
-  <rect x="440" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="484" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">People</text>
-  <rect x="538" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="582" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Content Cal</text>
-  <rect x="636" y="442" width="88" height="26" rx="6" fill="#13132a" stroke="#3b82f633"/>
-  <text x="680" y="459" text-anchor="middle" fill="#3b82f6" font-size="9">Events</text>
+  <!-- CONNECT -->
+  <rect x="534" y="224" width="176" height="162" rx="10" fill="#0a0a1a" stroke="#f59e0b28"/>
+  <text x="622" y="242" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="bold" letter-spacing="1">🔗 CONNECT</text>
+  <rect x="542" y="248" width="160" height="19" rx="5" fill="#0d0d22" stroke="#f59e0b15"/>
+  <text x="622" y="261" text-anchor="middle" fill="#94a3b8" font-size="9">🤝 People</text>
+  <rect x="542" y="271" width="160" height="19" rx="5" fill="#0d0d22" stroke="#f59e0b15"/>
+  <text x="622" y="284" text-anchor="middle" fill="#94a3b8" font-size="9">📞 Call Log + follow-ups</text>
+  <rect x="542" y="294" width="160" height="19" rx="5" fill="#0d0d22" stroke="#f59e0b15"/>
+  <text x="622" y="307" text-anchor="middle" fill="#94a3b8" font-size="9">🗓 Events</text>
+  <rect x="542" y="317" width="160" height="19" rx="5" fill="#0d0d22" stroke="#f59e0b15"/>
+  <text x="622" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">📣 Content Calendar</text>
+  <rect x="542" y="340" width="160" height="19" rx="5" fill="#0d0d22" stroke="#f59e0b15"/>
+  <text x="622" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">🌐 Socials</text>
+  <rect x="542" y="363" width="160" height="19" rx="5" fill="#f59e0b08" stroke="#f59e0b22"/>
+  <text x="622" y="376" text-anchor="middle" fill="#f59e0b" font-size="9">25 modules · 5 sections</text>
 
-  <!-- Row 3 special -->
-  <rect x="48"  y="476" width="120" height="26" rx="6" fill="#0d0d1a" stroke="#ef444433"/>
-  <text x="108" y="493" text-anchor="middle" fill="#ef4444" font-size="9">AuthScreen  🔐</text>
-  <rect x="178" y="476" width="120" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
-  <text x="238" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">WeeklyStats  📊</text>
-  <rect x="308" y="476" width="120" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
-  <text x="368" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">Achievements 🏅</text>
-  <rect x="438" y="476" width="120" height="26" rx="6" fill="#0d0d1a" stroke="#f59e0b33"/>
-  <text x="498" y="493" text-anchor="middle" fill="#f59e0b" font-size="9">Profile  👤</text>
-  <rect x="568" y="476" width="204" height="26" rx="6" fill="url(#hdr)" opacity="0.85"/>
-  <text x="670" y="493" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">✦ AIInsights  (Smart Analysis)</text>
+  <!-- YOU -->
+  <rect x="720" y="224" width="216" height="162" rx="10" fill="#0a0a1a" stroke="#f43f5e28"/>
+  <text x="828" y="242" text-anchor="middle" fill="#f43f5e" font-size="9" font-weight="bold" letter-spacing="1">👤 YOU</text>
+  <rect x="728" y="248" width="200" height="19" rx="5" fill="#0d0d22" stroke="#f43f5e15"/>
+  <text x="828" y="261" text-anchor="middle" fill="#94a3b8" font-size="9">✦ AI Coach — local smart engine</text>
+  <rect x="728" y="271" width="200" height="19" rx="5" fill="#0d0d22" stroke="#f43f5e15"/>
+  <text x="828" y="284" text-anchor="middle" fill="#94a3b8" font-size="9">📓 Journal + mood (1–5)</text>
+  <rect x="728" y="294" width="200" height="19" rx="5" fill="#ef444415" stroke="#ef444435"/>
+  <text x="828" y="307" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="bold">🏥 Medical — emergency · meds · allergies</text>
+  <rect x="728" y="317" width="96" height="19" rx="5" fill="#0d0d22" stroke="#f43f5e15"/>
+  <text x="776" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">📊 Weekly Review</text>
+  <rect x="832" y="317" width="96" height="19" rx="5" fill="#0d0d22" stroke="#f43f5e15"/>
+  <text x="880" y="330" text-anchor="middle" fill="#94a3b8" font-size="9">🏅 Wins</text>
+  <rect x="728" y="340" width="200" height="19" rx="5" fill="#0d0d22" stroke="#f43f5e15"/>
+  <text x="828" y="353" text-anchor="middle" fill="#94a3b8" font-size="9">👤 Profile</text>
+  <rect x="728" y="363" width="200" height="19" rx="5" fill="#f43f5e08" stroke="#f43f5e22"/>
+  <text x="828" y="376" text-anchor="middle" fill="#f43f5e" font-size="9">Student · Doctor · Parent · Freelancer</text>
 
-  <!-- Connector lines -->
-  <line x1="450" y1="248" x2="450" y2="265" stroke="#26264a" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="450" y1="365" x2="450" y2="382" stroke="#26264a" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="450" y1="532" x2="450" y2="550" stroke="#10b98155" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="480" y1="386" x2="480" y2="402" stroke="#1a1a35" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- LOCAL AI ENGINE -->
-  <rect x="30" y="550" width="840" height="72" rx="10" fill="#0c0c1a" stroke="#10b98144" stroke-width="1.5"/>
-  <text x="450" y="568" text-anchor="middle" fill="#64748b" font-size="9" letter-spacing="2">LOCAL AI ENGINE  —  instant · client-side · no API needed</text>
-  <rect x="48"  y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="107" y="591" text-anchor="middle" fill="#10b981" font-size="9">Priority Queue</text>
-  <rect x="176" y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="235" y="591" text-anchor="middle" fill="#10b981" font-size="9">Productivity Score</text>
-  <rect x="304" y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="363" y="591" text-anchor="middle" fill="#10b981" font-size="9">Smart Suggestions</text>
-  <rect x="432" y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="491" y="591" text-anchor="middle" fill="#10b981" font-size="9">Mood Trend Chart</text>
-  <rect x="560" y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="619" y="591" text-anchor="middle" fill="#10b981" font-size="9">Progress Breakdown</text>
-  <rect x="688" y="576" width="118" height="22" rx="5" fill="#10b98112" stroke="#10b98133"/>
-  <text x="747" y="591" text-anchor="middle" fill="#10b981" font-size="9">Daily Motivation ✦</text>
+  <!-- ROW 4: AI ENGINE + PWA -->
+  <rect x="24" y="402" width="572" height="72" rx="10" fill="#0a0a1a" stroke="#00d4ff33" stroke-width="1.5"/>
+  <text x="310" y="420" text-anchor="middle" fill="#00d4ff" font-size="9" font-weight="bold" letter-spacing="2">✦ LOCAL AI ENGINE — no API · no cost · instant</text>
+  <rect x="36"  y="427" width="118" height="21" rx="5" fill="#00d4ff0a" stroke="#00d4ff22"/>
+  <text x="95"  y="441" text-anchor="middle" fill="#00d4ff" font-size="9">Priority Queue</text>
+  <rect x="162" y="427" width="118" height="21" rx="5" fill="#00d4ff0a" stroke="#00d4ff22"/>
+  <text x="221" y="441" text-anchor="middle" fill="#00d4ff" font-size="9">Productivity Score</text>
+  <rect x="288" y="427" width="118" height="21" rx="5" fill="#00d4ff0a" stroke="#00d4ff22"/>
+  <text x="347" y="441" text-anchor="middle" fill="#00d4ff" font-size="9">Smart Suggestions</text>
+  <rect x="414" y="427" width="170" height="21" rx="5" fill="#00d4ff0a" stroke="#00d4ff22"/>
+  <text x="499" y="441" text-anchor="middle" fill="#00d4ff" font-size="9">Mood Trend · Skill Distribution</text>
+  <rect x="36"  y="452" width="548" height="15" rx="4" fill="#00d4ff06"/>
+  <text x="310" y="463" text-anchor="middle" fill="#334155" font-size="9">Reads deadlines · habits · mood · goals · skills → returns insight in under 1 second</text>
+
+  <rect x="608" y="402" width="328" height="72" rx="10" fill="#0a0a1a" stroke="#10b98133" stroke-width="1.5"/>
+  <text x="772" y="420" text-anchor="middle" fill="#10b981" font-size="9" font-weight="bold" letter-spacing="2">PWA — offline · installable · private</text>
+  <rect x="620" y="427" width="146" height="21" rx="5" fill="#10b9810a" stroke="#10b98122"/>
+  <text x="693" y="441" text-anchor="middle" fill="#10b981" font-size="9">manifest.json</text>
+  <rect x="774" y="427" width="150" height="21" rx="5" fill="#10b9810a" stroke="#10b98122"/>
+  <text x="849" y="441" text-anchor="middle" fill="#10b981" font-size="9">sw.js (cache-first)</text>
+  <rect x="620" y="452" width="304" height="15" rx="4" fill="#10b98106"/>
+  <text x="772" y="463" text-anchor="middle" fill="#334155" font-size="9">Works without internet · installs on any device · no login required</text>
+
+  <line x1="480" y1="474" x2="480" y2="490" stroke="#7c3aed44" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ROW 5: DEPLOY -->
+  <rect x="24" y="490" width="912" height="50" rx="10" fill="#0a0a1a" stroke="#7c3aed33" stroke-width="1.5"/>
+  <text x="480" y="508" text-anchor="middle" fill="#334155" font-size="9" letter-spacing="2">DEPLOY — github pages · codenimra.github.io/devos · npm run deploy</text>
+  <rect x="180" y="514" width="600" height="18" rx="5" fill="url(#hdr)" opacity="0.08" stroke="url(#hdr)" stroke-width="0.5"/>
+  <text x="480" y="527" text-anchor="middle" fill="#a78bfa" font-size="10">Built for Frostbyte Grand Finale 2026 · Business Management · AI/ML · Healthcare · Software Engineering</text>
+
 </svg>
